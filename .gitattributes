@@ -1,0 +1,4 @@
+# The record is bytes to be folded, never merged. A merge driver touching these would corrupt a
+# hash chain silently, which is the one failure this whole system exists to make impossible.
+*.jsonl -merge -diff
+*.json  -merge
