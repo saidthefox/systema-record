@@ -9,5 +9,12 @@
   "digest": "4d226b1c5c616bcc42c4760fca973bac6b00a71c6e4e61df22ca3a5743d97b75",
   "events": 792,
   "ts": "2026-08-19T05:22:49.458Z",
-  "recipe": "sha256(stateHash|logHash|seq)"
+  "recipe": "sha256(stateHash|logHash|seq)",
+  "txHash": "0x330a37ded0704663721e9bf28d571c7f8ce8fb58c450e93470000406c4019861",
+  "anchor": {
+    "chain": "World Chain",
+    "chainId": 480,
+    "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
+    "method": "headAt(uint256)"
+  }
 }

@@ -1,13 +1,13 @@
 {
   "v": 1,
   "head": {
-    "seq": 913,
-    "hash": "8d5bcf671a5fe4b8b9a51cf15af4a26958a6ba8afb016739176794a68a29ecf4",
-    "ts": "2026-08-19T18:59:40.191Z"
+    "seq": 914,
+    "hash": "48157a5d50973123a27e81913bf61357b3a9d16b30d68ae1680aae35d5ae69a1",
+    "ts": "2026-08-19T19:20:40.859Z"
   },
   "firstSeq": 0,
   "segmentEvents": 1000,
-  "totalEvents": 914,
+  "totalEvents": 915,
   "genesis": {
     "file": "genesis-state.json",
     "bytes": 9275126,
@@ -17,10 +17,10 @@
   "tail": {
     "file": "tail.jsonl",
     "fromSeq": 0,
-    "toSeq": 913,
-    "events": 914,
-    "bytes": 707011,
-    "sha256": "58b0f48e9f57ecd1a728617535daf3f47c7401586cb209778fce755d1f445469"
+    "toSeq": 914,
+    "events": 915,
+    "bytes": 707488,
+    "sha256": "1f21f47d6fb8de5ac9627c9f589710b84f66975ccdbf85f049addb15f0d3fc55"
   },
   "pin": {
     "height": 1000791,
@@ -29,7 +29,15 @@
     "stateHash": "a2fab993949e2cabea922f2fd7a9383789c290aaa1824922c47e8351931690b1",
     "logHash": "607bdf4a55b595d5bde7962313e89a438512ff97ea45491cd8171855884cbbdb",
     "v": 2,
-    "recipe": "sha256(stateHash|logHash|seq)"
+    "recipe": "sha256(stateHash|logHash|seq)",
+    "codeHash": "ad1150fdbc3d5c2b127c11da5b3b367a9a3cb02deda55ca90dd0ac8491c92f29",
+    "anchor": {
+      "chain": "World Chain",
+      "chainId": 480,
+      "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
+      "method": "headAt(uint256)"
+    },
+    "txHash": "0x330a37ded0704663721e9bf28d571c7f8ce8fb58c450e93470000406c4019861"
   },
-  "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote, then verify it yourself: npx systema-verify <url>"
+  "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote — then do not take our word for any of it: git clone https://github.com/saidthefox/systems-verify && cd systems-verify && npm install && ./bin/systema-verify <this url>. It folds the record with the published law and reads the anchor back off World Chain, which is the only claim here that does not depend on trusting this server."
 }
