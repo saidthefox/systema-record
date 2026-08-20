@@ -12,8 +12,29 @@ takes both. This is the offsite copy.
 - `prod/genesis-state.json` — the genesis snapshot the log folds from
 - `prod/checkpoint.json` — the newest anchor receipt
 
+- `archive/` — **the era before the log**, and the projections beside it: every entry, definition,
+  edge, label, challenge, stake, holdback and contribution, plus all 60,000 judge votes with the
+  13 MB of written reasoning that is the most interesting content in the system. Month-sharded
+  JSONL, with `archive/manifest.json` naming every shard and its sha256.
+
 Git is a good home for this *because of the segments*: a sealed segment is written once and never
-rewritten, so history does not bloat. Only the tail and the manifest churn.
+rewritten, so history does not bloat. Only the tail and the manifest churn. The archive is built to
+the same shape — shards are partitioned by month and byte-stable, so a closed month regenerates
+identically forever and a nightly re-export of unchanged data costs git **nothing** (measured: 63 MB
+of JSONL, 15 MB in `.git`, and a second identical export added zero bytes).
+
+## What the archive is NOT
+
+An allowlist, never a dump. The database it comes from holds office signing keys, wallet keys,
+password hashes, API key hashes and raw World ID nullifiers, and none of that is here: the exporter
+names every table and column that may leave, and runs credential patterns over the bytes it actually
+produced before any of them are allowed to stand. `archive/manifest.json` lists what was excluded and
+why. The hourly push additionally refuses if any file under `archive/` is unlisted, missing, or
+altered from the sha256 the manifest recorded.
+
+Two honest limits. The archive is a **projection**, not the record — it is Postgres as it stood at
+`asOf`, so derived counters (reputation, totals, activity) are point-in-time, and it carries no
+independent proof. The record is `prod/`, and that is the thing the anchor covers.
 
 ## Verify it — do not trust it
 
