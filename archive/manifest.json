@@ -1,10 +1,10 @@
 {
   "v": 1,
-  "asOf": "2026-08-20T01:44:41.649Z",
+  "asOf": "2026-08-20T06:05:11.164Z",
   "note": "The game's whole output as of the stamp above. Shards are month-partitioned and byte-stable: a closed month regenerates identically forever, so this is cheap to keep in git. Derived counters (reputation, totals) are point-in-time. The verifiable RECORD is /log/ — this is the era before it, plus the projections, exported from Postgres.",
   "tables": 18,
-  "rows": 118074,
-  "bytes": 63009750,
+  "rows": 118089,
+  "bytes": 63020388,
   "excluded": {
     "User": "email + hashed_password — a real person's login",
     "ApiKey": "key_hash — a credential, even hashed",
@@ -61,9 +61,9 @@
     },
     {
       "file": "Contribution/2026-08.jsonl",
-      "rows": 7354,
-      "bytes": 3660718,
-      "sha256": "4cb36dbff4b444c812643a17de5d55fc3aaf855a9aad64d2174e3163f85b083e"
+      "rows": 7357,
+      "bytes": 3661960,
+      "sha256": "019f3767c926fff33d1a82925ee94264ac0d5d7419c427ac00241e30f464ba05"
     },
     {
       "file": "Definition/2026-05.jsonl",
@@ -97,9 +97,9 @@
     },
     {
       "file": "Edge/2026-08.jsonl",
-      "rows": 4246,
-      "bytes": 3204823,
-      "sha256": "d8a656689b5703d228b17898f1c1302e946dc3366cefa14b1b2177abca623ebd"
+      "rows": 4249,
+      "bytes": 3207077,
+      "sha256": "209d36809a93f1a56e471352d6e3e89fab8f41c7289329c237df34f05f3834ab"
     },
     {
       "file": "entry_facet/all.jsonl",
@@ -205,9 +205,9 @@
     },
     {
       "file": "shadow_read/2026-08.jsonl",
-      "rows": 1400,
-      "bytes": 1014674,
-      "sha256": "758ff263cd3a737aae26ec156c5196acfa34aab81107ad664a153098fce368d1"
+      "rows": 1409,
+      "bytes": 1021816,
+      "sha256": "d9a34bde8503474f3c66f6a6bb85af548b0dd971bd83207f0299a267dfebdeff"
     },
     {
       "file": "stake/2026-07.jsonl",
