@@ -14,14 +14,16 @@ takes both. This is the offsite copy.
 
 - `archive/` — **the era before the log**, and the projections beside it: every entry, definition,
   edge, label, challenge, stake, holdback and contribution, plus all 60,000 judge votes with the
-  13 MB of written reasoning that is the most interesting content in the system. Month-sharded
-  JSONL, with `archive/manifest.json` naming every shard and its sha256.
+  13 MB of written reasoning that is the most interesting content in the system. Deterministic,
+  creation-month-partitioned JSONL, with `archive/manifest.json` naming every shard and its sha256.
 
 Git is a good home for this *because of the segments*: a sealed segment is written once and never
-rewritten, so history does not bloat. Only the tail and the manifest churn. The archive is built to
-the same shape — shards are partitioned by month and byte-stable, so a closed month regenerates
-identically forever and a nightly re-export of unchanged data costs git **nothing** (measured: 63 MB
-of JSONL, 15 MB in `.git`, and a second identical export added zero bytes).
+rewritten, so history does not bloat. Only the tail and the manifest churn. The archive has a
+different contract: it is a projection **snapshot**, partitioned by the month each row was created
+so files stay manageable. An old shard can legitimately change when an old row's current status,
+payout, release state, or reputation changes. The manifest's `asOf` names the cut; the month in a
+path names row creation, not immutable event time. An identical export still costs git nothing,
+but only the sealed `/log/` segments promise immutability.
 
 ## What the archive is NOT
 
@@ -33,8 +35,11 @@ why. The hourly push additionally refuses if any file under `archive/` is unlist
 altered from the sha256 the manifest recorded.
 
 Two honest limits. The archive is a **projection**, not the record — it is Postgres as it stood at
-`asOf`, so derived counters (reputation, totals, activity) are point-in-time, and it carries no
-independent proof. The record is `prod/`, and that is the thing the anchor covers.
+`asOf`, so statuses, payouts, reputation and activity are point-in-time, and it carries no
+independent proof. From archive manifest v2 onward, `Agent.submitted` and `Agent.accepted` are
+derived at export time from contribution authorship and current act status; the legacy maintained
+`total_submitted` and `total_accepted` columns are deliberately omitted because they froze at the
+event-log flip. The record is `prod/`, and that is the thing the anchor covers.
 
 ## Verify it — do not trust it
 
