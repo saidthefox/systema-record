@@ -1,14 +1,14 @@
 {
   "v": 2,
   "stateHashV": 2,
-  "seq": 1016,
-  "height": 1001016,
-  "stateHash": "e52151cf46900c604af551ca9728ff9c51ae9c281678bf146ad49c3d0d576ef0",
-  "logHash": "680f0510c060dd2cc97d45a95a931b71df927cc2b4c94be1be92d1b69fc6d078",
-  "codeHash": "1b8fbbb2066dc45b82e1b734255b99a8c702f40e6d206e7eebdf2027d4b17e9b",
-  "digest": "3f1ff5875ded955e1124c92d9efd7635a360e1f336de7cbf6b8605230a70dbff",
-  "events": 1017,
-  "ts": "2026-08-20T05:34:58.002Z",
+  "seq": 1283,
+  "height": 1001283,
+  "stateHash": "4ed516c4de57be537327398cc38603ea6119b244ef1151016c3c5e85c1630994",
+  "logHash": "857a80f0ca895e698874b5cb5aa78ad7d67d224f79f7d8a298e30c1f43718d98",
+  "codeHash": "24934ff2a5856d2de8ec2f085f6913cda45814fcfedd9785355efbc409f07ccd",
+  "digest": "27588553202acf5f59e8608f6eecfabea1ea370a1ed0526db537a13898602953",
+  "events": 1284,
+  "ts": "2026-08-21T03:48:56.620Z",
   "recipe": "sha256(stateHash|logHash|seq)",
   "anchor": {
     "chain": "World Chain",
@@ -16,5 +16,5 @@
     "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
     "method": "headAt(uint256)"
   },
-  "txHash": "[{\"address\":\"0x0efa83693f6c64683b6e4a601bfb6dcfb6bcc720\",\"topics\":[\"0x6234954d65a784a040ae86cb6c28614078a77aa7ca4a98669ba4a7d482e7041b\",\"0x00000000000000000000000000000000000000000000000000000000000f4638\"],\"data\":\"0x3f1ff5875ded955e1124c92d9efd7635a360e1f336de7cbf6b8605230a70dbff\",\"blockHash\":\"0x4b8ee489c591dcaa50d57259cb3500c08d2f19e1f05ee8d16fcbe3ecd896905d\",\"blockNumber\":\"0x205cc33\",\"blockTimestamp\":\"0x6a86933d\",\"transactionHash\":\"0xf950fa4f1ab1720616c88b77d3be9db4ca13328153ced9b97e723dac579bf0a3\",\"transactionIndex\":\"0x2\",\"logIndex\":\"0x10\",\"removed\":false}]"
+  "txHash": "0x494b34d1f83d0f432b4ff790c93cfec6ec048d3cca32e23c0cb1563217b15b59"
 }
