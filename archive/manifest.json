@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "asOf": "2026-08-29T06:05:08.915Z",
+  "asOf": "2026-08-30T06:05:10.378Z",
   "kind": "postgres-projection-snapshot",
   "note": "The game's whole PostgreSQL projection as of the stamp above. Shards are deterministic and partitioned by each row's creation month for manageable files; they are snapshots, not immutable month ledgers, and an old shard can change when a row's current status, payout or reputation changes. Agent submitted/accepted are derived at export time. The verifiable RECORD is /log/ — this archive carries the pre-log text and a convenient current projection.",
   "partitioning": {
