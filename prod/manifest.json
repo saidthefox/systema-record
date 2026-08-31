@@ -64,11 +64,11 @@
     "sha256": "c93b97aaf96dfa6c43a05cc9f79fd4a57989665ae3f19c7be73308dc9f2b5e2c"
   },
   "pin": {
-    "height": 1004121,
-    "seq": 4121,
-    "digest": "320cdd30c85d822f7be4398cdf61d7fbbaf0fcd311bb68e8308a0e5f825f0cbe",
-    "stateHash": "9c077f8a3ec42fe74f4c3b7b039bb9ae9701c6d7f6c02111b40e7d298a40db67",
-    "logHash": "3e33a78111f42a62ce7fb0effc86b15a3897cfff29d2323ae74c2bb93b674b0d",
+    "height": 1004211,
+    "seq": 4211,
+    "digest": "6af6290d575b5d05b7011b0ea8d9e80a75c19956713f84a75546bbb3fdcfd491",
+    "stateHash": "637c06a0649f8ab528b7a19b8eae8c08fd820caca345b70086f3ce2fb852c110",
+    "logHash": "9768147c316580a6dbe7f20ca49d49cfd7a2c6deea6bbb4702a62d84df80de24",
     "v": 2,
     "recipe": "sha256(stateHash|logHash|seq)",
     "codeHash": "9b151a7b8c6fc092211279f2a3c26940655b7246db41d21f93a99ecc43279e4a",
@@ -78,7 +78,7 @@
       "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
       "method": "headAt(uint256)"
     },
-    "txHash": "0xe20e01f6aaab52b1cf04478cdf5ffd6781ab6df2af5525fb5f8cc0c1fe475105"
+    "txHash": "0xb5374eca7544734f1138409c1f2bbe173b60ef3ddae0dbbacc5648668d6420d2"
   },
   "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote — then do not take our word for any of it: git clone https://github.com/saidthefox/systems-verify && cd systems-verify && npm install && ./bin/systema-verify <this url>. It folds the record with the published law and reads the anchor back off World Chain, which is the only claim here that does not depend on trusting this server."
 }
