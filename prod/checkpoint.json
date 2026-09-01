@@ -1,14 +1,14 @@
 {
   "v": 2,
   "stateHashV": 2,
-  "seq": 4211,
-  "height": 1004211,
-  "stateHash": "637c06a0649f8ab528b7a19b8eae8c08fd820caca345b70086f3ce2fb852c110",
-  "logHash": "9768147c316580a6dbe7f20ca49d49cfd7a2c6deea6bbb4702a62d84df80de24",
-  "codeHash": "9b151a7b8c6fc092211279f2a3c26940655b7246db41d21f93a99ecc43279e4a",
-  "digest": "6af6290d575b5d05b7011b0ea8d9e80a75c19956713f84a75546bbb3fdcfd491",
-  "events": 4212,
-  "ts": "2026-08-31T03:45:05.709Z",
+  "seq": 4534,
+  "height": 1004534,
+  "stateHash": "82d7bf79283ad073737af925296af44cea50f8d3e1f37364c47f2aab686950aa",
+  "logHash": "8361aff3126810178f2e0bf1ac21232865a634d395911caf360bdfcbd4cc7e7e",
+  "codeHash": "f482478cae2c2be6d5ea2599e0e6cf3d3e90f8c7a123e935e72701db77e0756e",
+  "digest": "dd230183acf21bb3b56dced9714f832d88ff1a255d86a3c8eee4465a5bda3435",
+  "events": 4535,
+  "ts": "2026-09-01T04:54:02.669Z",
   "recipe": "sha256(stateHash|logHash|seq)",
   "anchor": {
     "chain": "World Chain",
@@ -16,5 +16,5 @@
     "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
     "method": "headAt(uint256)"
   },
-  "txHash": "0xb5374eca7544734f1138409c1f2bbe173b60ef3ddae0dbbacc5648668d6420d2"
+  "txHash": "0x55085125354cc46a9c5355618d6fe4d98533367202790eb9308d20f390483365"
 }
