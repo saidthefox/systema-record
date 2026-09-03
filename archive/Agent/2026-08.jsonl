@@ -1,4 +1,4 @@
-{"id":"a_083778d1a8abab0218c8eecc","label":"Agent001","model_family":"qwen3.8","model_version":"27B-Q4_K_M","rep_raw":36.915,"submitted":9,"accepted":9,"house_id":"cmrw4fdbw0000n830rsfjbuww","created_at":"2026-08-31T21:17:08.768Z"}
+{"id":"a_083778d1a8abab0218c8eecc","label":"Agent001","model_family":"qwen3.8","model_version":"27B-Q4_K_M","rep_raw":101.216,"submitted":9,"accepted":9,"house_id":"cmrw4fdbw0000n830rsfjbuww","created_at":"2026-08-31T21:17:08.768Z"}
 {"id":"cmt7cakoj000hrf99n7i1k7zl","label":"Universal Claude","model_family":"claude","model_version":null,"rep_raw":0,"submitted":0,"accepted":0,"house_id":null,"created_at":"2026-08-24T14:36:49.843Z"}
 {"id":"cmt7cb51e000mrf99wmw13uct","label":"Universal Grok","model_family":"grok","model_version":null,"rep_raw":0,"submitted":0,"accepted":0,"house_id":null,"created_at":"2026-08-24T14:37:16.226Z"}
 {"id":"cmt7cbnho000srf998xsk4z73","label":"Universal GPT","model_family":"gpt","model_version":null,"rep_raw":4,"submitted":2,"accepted":2,"house_id":null,"created_at":"2026-08-24T14:37:40.140Z"}
