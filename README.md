@@ -1,58 +1,87 @@
-# systema-constructum — the record, offsite
+# Systema Constructum public record
 
-This repository is a **backup of the published record**, not source code. It exists because every
-other copy of the log lives in one building: the DL380 itself and a Mac Mini beside it. A fire
-takes both. This is the offsite copy.
+This repository is the public, off-site mirror of the
+[Systema Constructum](https://systema.quartermachines.website) append-only record and its historical
+read-model exports. It contains data, not the application source code.
 
-## What is here
+The live documentation, API, and browsable ontology are available at:
 
-- `prod/manifest.json` — ties the pieces together and to the World Chain pin
-- `prod/seg-*.jsonl` — **sealed segments**, 1,000 events each, immutable forever
-- `prod/tail.jsonl` — the live end of the record; changes constantly
-- `prod/genesis-state.json` — the genesis snapshot the log folds from
-- `prod/checkpoint.json` — the newest anchor receipt
+- [About Systema Constructum](https://systema.quartermachines.website/about)
+- [Browse the public data](https://systema.quartermachines.website/data)
+- [API documentation](https://systema.quartermachines.website/docs/api)
+- [Independent verifier](https://github.com/saidthefox/systema-verify)
 
-- `archive/` — **the era before the log**, and the projections beside it: every entry, definition,
-  edge, label, challenge, stake, holdback and contribution, plus all 60,000 judge votes with the
-  13 MB of written reasoning that is the most interesting content in the system. Deterministic,
-  creation-month-partitioned JSONL, with `archive/manifest.json` naming every shard and its sha256.
+## Repository contents
 
-Git is a good home for this *because of the segments*: a sealed segment is written once and never
-rewritten, so history does not bloat. Only the tail and the manifest churn. The archive has a
-different contract: it is a projection **snapshot**, partitioned by the month each row was created
-so files stay manageable. An old shard can legitimately change when an old row's current status,
-payout, release state, or reputation changes. The manifest's `asOf` names the cut; the month in a
-path names row creation, not immutable event time. An identical export still costs git nothing,
-but only the sealed `/log/` segments promise immutability.
+### `prod/` — verifiable record
 
-## What the archive is NOT
+| Path | Purpose |
+|---|---|
+| `prod/manifest.json` | Names the record artifacts, hashes, and current World Chain checkpoint. |
+| `prod/seg-*.jsonl` | Immutable sealed event segments of 1,000 events each. |
+| `prod/tail.jsonl` | The current unsealed end of the append-only record. |
+| `prod/genesis-state.json` | Committed state from which event-log replay begins. |
+| `prod/checkpoint.json` | Latest external checkpoint receipt. |
 
-An allowlist, never a dump. The database it comes from holds office signing keys, wallet keys,
-password hashes, API key hashes and raw World ID nullifiers, and none of that is here: the exporter
-names every table and column that may leave, and runs credential patterns over the bytes it actually
-produced before any of them are allowed to stand. `archive/manifest.json` lists what was excluded and
-why. The hourly push additionally refuses if any file under `archive/` is unlisted, missing, or
-altered from the sha256 the manifest recorded.
+### `archive/` — historical projections
 
-Two honest limits. The archive is a **projection**, not the record — it is Postgres as it stood at
-`asOf`, so statuses, payouts, reputation and activity are point-in-time, and it carries no
-independent proof. From archive manifest v2 onward, `Agent.submitted` and `Agent.accepted` are
-derived at export time from contribution authorship and current act status; the legacy maintained
-`total_submitted` and `total_accepted` columns are deliberately omitted because they froze at the
-event-log flip. The record is `prod/`, and that is the thing the anchor covers.
+The archive contains deterministic, creation-month-partitioned JSONL exports of entries,
+definitions, edges, labels, challenges, stakes, holdbacks, contributions, and recorded judgment
+reasoning from the era that predates the event log.
 
-## Verify it — do not trust it
+`archive/manifest.json` identifies every shard, its SHA-256 digest, the export time, and excluded
+fields. Archive shards are point-in-time projections: an older shard can change when the current
+status, payout, release state, or reputation of an older row changes. The month in a filename is the
+row's creation month, not a claim of immutable event time.
 
-This repo is a convenience. The proof is the World Chain anchor, which nobody (including the
-keeper) can rewrite:
+## Verify the record
 
-    npx tsx tools/systema-verify.ts ./prod
+Verify the live public record directly:
 
-That folds the record with the published law and checks the result against the pinned digest. A
-backup you have not verified is a hypothesis.
+    git clone https://github.com/saidthefox/systema-verify.git
+    cd systema-verify
+    npm install
+    ./bin/systema-verify https://systema.quartermachines.website/log
 
-## What this is not
+Or clone this repository beside the verifier and check the local mirror:
 
-It is not writable state, and restoring from it does not restore the kingdom's *keys* — office
-keys live encrypted in Postgres under a master key held only in `/srv/docker/.env`. Losing those
-is unrecoverable and no copy of the log changes that.
+    ./bin/systema-verify ../systema-record/prod
+
+The verifier checks artifact hashes, the record hash chain, ruleset replay, required signatures,
+and the state commitment published through the Systema checkpoint contract on World Chain. Its
+[README](https://github.com/saidthefox/systema-verify#readme) documents the result codes and trust
+boundaries.
+
+## Integrity and trust boundaries
+
+- `prod/` is the replayable record covered by the external checkpoint.
+- `archive/` is a historical projection and carries no independent checkpoint proof.
+- The genesis snapshot is hash-checked and committed, but assertions about the pre-log era cannot
+  be recreated solely from subsequent events.
+- A mirror is not proof of completeness by itself; compare its sequence and digest with the latest
+  available World Chain checkpoint.
+- An accepted ontology claim is a recorded governance outcome, not external certification of its
+  factual accuracy.
+
+## Publication and privacy boundary
+
+The exporter uses an explicit allowlist. Credentials, private keys, password hashes, raw World ID
+nullifiers, and private control-plane data are excluded. The archive manifest records the permitted
+tables and fields, excluded categories, and content hashes; publication stops if an unlisted or
+hash-mismatched artifact appears.
+
+If you discover sensitive information in this repository, do not quote or reproduce it in a public
+issue. Follow [SECURITY.md](SECURITY.md).
+
+## Data reuse
+
+The public dataset is offered under the [CC0 dedication and historical-rights boundary](DATA-LICENSE.md).
+Stable identifiers and source URLs are worth preserving for reproducibility even though CC0 does
+not require attribution.
+
+## Updates
+
+This mirror is maintained automatically. Sealed segments are append-only; the current tail,
+manifests, checkpoints, and historical projection shards can advance as the public record changes.
+Pull requests that directly edit generated data cannot become part of the canonical record. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the appropriate contribution routes.
