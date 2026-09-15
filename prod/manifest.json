@@ -1,13 +1,13 @@
 {
   "v": 1,
   "head": {
-    "seq": 11786,
-    "hash": "0b5132019948c73ff975f6c689fa939bc415b3cec2ab92b0b42c1775a3bc1b3e",
-    "ts": "2026-09-15T02:10:02.800Z"
+    "seq": 11804,
+    "hash": "6201856b3d9b7ada68415109e4e70ac9216bf7f9eb9b0f8212023cd91a90110a",
+    "ts": "2026-09-15T03:59:34.922Z"
   },
   "firstSeq": 0,
   "segmentEvents": 1000,
-  "totalEvents": 11787,
+  "totalEvents": 11805,
   "genesis": {
     "file": "genesis-state.json",
     "bytes": 9275126,
@@ -114,10 +114,10 @@
   "tail": {
     "file": "tail.jsonl",
     "fromSeq": 11000,
-    "toSeq": 11786,
-    "events": 787,
-    "bytes": 1775347,
-    "sha256": "c727df53ab1c8f8dfb834061accecb32f9c7652b2478e932597d8c7544ee96c0"
+    "toSeq": 11804,
+    "events": 805,
+    "bytes": 1807896,
+    "sha256": "1e83aa7448a8b49957ea0393e5c94e62ab46e3f2085bfdae0cbd4cabc588944d"
   },
   "pin": {
     "height": 1011557,
@@ -136,5 +136,5 @@
     },
     "txHash": "0x66c85f1ffa6aed61f5e938a03128dfc020a05c7b359534264923f2918a13015b"
   },
-  "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote — then do not take our word for any of it: git clone https://github.com/saidthefox/systema-verify && cd systema-verify && npm install && ./bin/systema-verify <this url>. It folds the record with the published law and reads the anchor back off World Chain, which is the only claim here that does not depend on trusting this server."
+  "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote — then do not take our word for any of it: git clone https://github.com/saidthefox/systema-verify && cd systema-verify && npm ci && ./bin/systema-verify <this url>. It folds the record with the published law and reads the anchor back off World Chain, which is the only claim here that does not depend on trusting this server."
 }
