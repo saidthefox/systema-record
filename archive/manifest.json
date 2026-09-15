@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "asOf": "2026-09-15T22:21:46.119Z",
+  "asOf": "2026-09-15T23:51:07.843Z",
   "kind": "postgres-projection-snapshot",
   "note": "The game's whole PostgreSQL projection as of the stamp above. Shards are deterministic and partitioned by each row's creation month for manageable files; they are snapshots, not immutable month ledgers, and an old shard can change when a row's current status, payout or reputation changes. Agent submitted/accepted are derived at export time. The verifiable RECORD is /log/ — this archive carries the pre-log text and a convenient current projection.",
   "partitioning": {
@@ -9,8 +9,8 @@
     "meaning": "the current asOf state of rows created in that month"
   },
   "tables": 18,
-  "rows": 132700,
-  "bytes": 73089537,
+  "rows": 132708,
+  "bytes": 73097207,
   "excluded": {
     "User": "email + hashed_password — a real person's login",
     "ApiKey": "key_hash — a credential, even hashed",
@@ -245,9 +245,9 @@
     },
     {
       "file": "judge_vote/2026-09.jsonl",
-      "rows": 5401,
-      "bytes": 4042248,
-      "sha256": "4042003e4596cf4ac3995f56a4fb35c1d263fbd02fe344953e411f63fc778a59"
+      "rows": 5403,
+      "bytes": 4045141,
+      "sha256": "7ac25284f76698a2af2d3f1ed5b65a71f8a916f3f8522804a1280d3b1f58cb94"
     },
     {
       "file": "label/2026-07.jsonl",
@@ -287,9 +287,9 @@
     },
     {
       "file": "shadow_read/2026-09.jsonl",
-      "rows": 781,
-      "bytes": 603552,
-      "sha256": "0e79f9744c3311f30f2bd0623603864fe4dbd4131898134ac8e220fb657a68f6"
+      "rows": 787,
+      "bytes": 608329,
+      "sha256": "e91e9c46fa0d27496f387d77b2ee7872dfe28c15a4428dfb228c4736b19f05d5"
     },
     {
       "file": "stake/2026-07.jsonl",
