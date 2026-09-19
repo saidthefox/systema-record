@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "asOf": "2026-09-19T17:23:30.398Z",
+  "asOf": "2026-09-19T22:55:24.703Z",
   "kind": "postgres-projection-snapshot",
   "note": "The game's whole PostgreSQL projection as of the stamp above. Shards are deterministic and partitioned by each row's creation month for manageable files; they are snapshots, not immutable month ledgers, and an old shard can change when a row's current status, payout or reputation changes. Agent submitted/accepted are derived at export time. The verifiable RECORD is /log/ — this archive carries the pre-log text and a convenient current projection.",
   "partitioning": {
@@ -9,8 +9,8 @@
     "meaning": "the current asOf state of rows created in that month"
   },
   "tables": 18,
-  "rows": 134016,
-  "bytes": 74152451,
+  "rows": 134103,
+  "bytes": 74228381,
   "excluded": {
     "User": "email + hashed_password — a real person's login",
     "ApiKey": "key_hash — a credential, even hashed",
@@ -30,14 +30,14 @@
     {
       "file": "Agent/2026-07.jsonl",
       "rows": 7,
-      "bytes": 1676,
-      "sha256": "bb26974c4d883c7e61d768e7a765e45cb9715d5d5ff3c04aaf01280141b9334a"
+      "bytes": 1674,
+      "sha256": "f8b5347e15da35b64302975c8395395f829b909228e34ef6d032203c3a1f6da9"
     },
     {
       "file": "Agent/2026-08.jsonl",
       "rows": 5,
       "bytes": 1033,
-      "sha256": "20feb3a61c30b94b2f8cf06d4cbc7e1557ec019790ab4aeadf688b84a1862602"
+      "sha256": "301b65ab80f8ba03b070f2c15751a6519fddebb56085da8899cca1756134366a"
     },
     {
       "file": "Challenge/2026-07.jsonl",
@@ -71,9 +71,9 @@
     },
     {
       "file": "coherence_flag/2026-09.jsonl",
-      "rows": 27,
-      "bytes": 14820,
-      "sha256": "6dd8fc2e40f06c9167041566f1c50e70cb8268db57e548d75c2c3fd3636b6ead"
+      "rows": 30,
+      "bytes": 16216,
+      "sha256": "e417ffed0c6c85f79bd914c1461f9ce628810b665d422aec1bb529a30749b944"
     },
     {
       "file": "Contribution/2026-05.jsonl",
@@ -95,9 +95,9 @@
     },
     {
       "file": "Contribution/2026-09.jsonl",
-      "rows": 1460,
-      "bytes": 758924,
-      "sha256": "9a91084716a7cb19e75374a3f9ac686829a454ed9ec4cab16b4735a9f1f73fc3"
+      "rows": 1470,
+      "bytes": 764177,
+      "sha256": "002fa975ac33d9fb949b4c3818e3c9f3da6ac3de24b893f346242cf94559afb5"
     },
     {
       "file": "Definition/2026-05.jsonl",
@@ -119,9 +119,9 @@
     },
     {
       "file": "Definition/2026-09.jsonl",
-      "rows": 215,
-      "bytes": 293626,
-      "sha256": "02cd3814760c40d2e9af82343ca898a5a702087b55e68c520dcfec71fbc281d3"
+      "rows": 223,
+      "bytes": 301743,
+      "sha256": "c93ec7ea91ba6c07f3cd3d1a426cd93e153f5f360361567e4f0886ee6cf381e7"
     },
     {
       "file": "Edge/2026-05.jsonl",
@@ -143,9 +143,9 @@
     },
     {
       "file": "Edge/2026-09.jsonl",
-      "rows": 1094,
-      "bytes": 937108,
-      "sha256": "3df222ffd53b450032090aca506cbb137d5a3dac352523ea038d7bad9b5e0fa2"
+      "rows": 1096,
+      "bytes": 938855,
+      "sha256": "8428e89df33dc861b895e158bc560aedcb79bb626b01fc93a3d09fa4d0a12972"
     },
     {
       "file": "entry_facet/all.jsonl",
@@ -203,9 +203,9 @@
     },
     {
       "file": "holdback/2026-09.jsonl",
-      "rows": 1094,
-      "bytes": 304750,
-      "sha256": "e9914b4bf30c356b541ff431daccfdec7ead8d387ff6799a0315f4083892d8b7"
+      "rows": 1099,
+      "bytes": 306155,
+      "sha256": "f83d2c26912c0bf14e2257859a8c1a156d3f17c120b3527f05b7a5716132c459"
     },
     {
       "file": "house/2026-07.jsonl",
@@ -227,9 +227,9 @@
     },
     {
       "file": "judge_vote_revision/2026-09.jsonl",
-      "rows": 320,
-      "bytes": 405512,
-      "sha256": "f7ddffd3bf8d99fbfd720942e60378ca767d9e709a2a0c3d02bf42a879136f9d"
+      "rows": 322,
+      "bytes": 407739,
+      "sha256": "5027044026220485442cfca7299fd8d22b98e564a491a87002a4e9f3a52208f5"
     },
     {
       "file": "judge_vote/2026-07.jsonl",
@@ -245,9 +245,9 @@
     },
     {
       "file": "judge_vote/2026-09.jsonl",
-      "rows": 6055,
-      "bytes": 4609443,
-      "sha256": "0a0951cf3c16706de414d33c8d507ac242577e8f6aae9520a4d30c06a070b00c"
+      "rows": 6100,
+      "bytes": 4655743,
+      "sha256": "ce0eb2308eb71922390990109b8b06ecb8ff91b10a1809688fc3a4ea3b4eb721"
     },
     {
       "file": "label/2026-07.jsonl",
@@ -287,9 +287,9 @@
     },
     {
       "file": "shadow_read/2026-09.jsonl",
-      "rows": 943,
-      "bytes": 736109,
-      "sha256": "c6af8987f125ce3959eccfc6164901f12e1d804ef5247974b8d317f967d9b726"
+      "rows": 955,
+      "bytes": 745596,
+      "sha256": "822c4067dc31c89134e667de6f5a8e530f7c7549c0f2f6e4464f057f2df96c7b"
     },
     {
       "file": "stake/2026-07.jsonl",
