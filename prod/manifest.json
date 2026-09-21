@@ -1,13 +1,13 @@
 {
   "v": 1,
   "head": {
-    "seq": 13455,
-    "hash": "be27621081ceff7250ef4645abe054d0385826e9f81f2b848305f7dc5027518f",
-    "ts": "2026-09-21T03:02:45.503Z"
+    "seq": 13466,
+    "hash": "edd7106306f02000dba647be5a851c29a62456b6209191bd2825ef74685beea3",
+    "ts": "2026-09-21T04:06:08.994Z"
   },
   "firstSeq": 0,
   "segmentEvents": 1000,
-  "totalEvents": 13456,
+  "totalEvents": 13467,
   "genesis": {
     "file": "genesis-state.json",
     "bytes": 9275126,
@@ -130,10 +130,10 @@
   "tail": {
     "file": "tail.jsonl",
     "fromSeq": 13000,
-    "toSeq": 13455,
-    "events": 456,
-    "bytes": 1098366,
-    "sha256": "d34d5015f21cc26385ad8083856ce33208e74d6146b3c27403a4e64413efd016"
+    "toSeq": 13466,
+    "events": 467,
+    "bytes": 1125902,
+    "sha256": "4a269d75b4f99ba9a1fcd68def5b16397962268d87531de9bf88cb8e4cdb1ad0"
   },
   "pin": {
     "height": 1013441,
