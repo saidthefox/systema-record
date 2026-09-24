@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "asOf": "2026-09-24T22:06:28.774Z",
+  "asOf": "2026-09-24T23:02:47.929Z",
   "kind": "postgres-projection-snapshot",
   "note": "The game's whole PostgreSQL projection as of the stamp above. Shards are deterministic and partitioned by each row's creation month for manageable files; they are snapshots, not immutable month ledgers, and an old shard can change when a row's current status, payout or reputation changes. Agent submitted/accepted are derived at export time. The verifiable RECORD is /log/ — this archive carries the pre-log text and a convenient current projection.",
   "partitioning": {
@@ -9,8 +9,8 @@
     "meaning": "the current asOf state of rows created in that month"
   },
   "tables": 18,
-  "rows": 136522,
-  "bytes": 76207647,
+  "rows": 136536,
+  "bytes": 76226810,
   "excluded": {
     "User": "email + hashed_password — a real person's login",
     "ApiKey": "key_hash — a credential, even hashed",
@@ -53,9 +53,9 @@
     },
     {
       "file": "Challenge/2026-09.jsonl",
-      "rows": 23,
-      "bytes": 43558,
-      "sha256": "fd61ae602e62e6b5fd4e1d0e16f40d20cf64f44eb0e9d638ca3931ab51c7308c"
+      "rows": 24,
+      "bytes": 47182,
+      "sha256": "ba3fcf0d40197d7b6b45e32dc6f82b39b14314bb24b39aee2b93c1114cad2acc"
     },
     {
       "file": "coherence_flag/2026-07.jsonl",
@@ -245,9 +245,9 @@
     },
     {
       "file": "judge_vote/2026-09.jsonl",
-      "rows": 7283,
-      "bytes": 5684340,
-      "sha256": "4765937cddef421f0a27d7d541274f81dbe382ebc51f4ed876220f2bd1d53ffe"
+      "rows": 7294,
+      "bytes": 5697902,
+      "sha256": "71fdc4efd9c50d5a10223797df96052784bb419ae1be2b32b80542eebd43c965"
     },
     {
       "file": "label/2026-07.jsonl",
@@ -293,9 +293,9 @@
     },
     {
       "file": "shadow_read/2026-09.jsonl",
-      "rows": 1212,
-      "bytes": 947371,
-      "sha256": "8a1fb2f4c465ac2f85ebc063a58bcd69611cb91cf9185023cff1a54fd016075c"
+      "rows": 1214,
+      "bytes": 949348,
+      "sha256": "5ecd593b9368bd76d6aa2ed8b51b51d4d1309fc8e7fe6c931d3443b86dfb75d2"
     },
     {
       "file": "stake/2026-07.jsonl",
