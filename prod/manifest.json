@@ -1,13 +1,13 @@
 {
   "v": 1,
   "head": {
-    "seq": 15856,
-    "hash": "e97832538a97737e2e76e4c566a88815fbb1ae6a8ae6bf56e9ef139d51631460",
-    "ts": "2026-09-26T04:26:18.878Z"
+    "seq": 15870,
+    "hash": "15a695689061bd6de6946d8446c3602ecb1095ea0e43bbc102cc4599cd7e73ab",
+    "ts": "2026-09-26T05:53:53.186Z"
   },
   "firstSeq": 0,
   "segmentEvents": 1000,
-  "totalEvents": 15857,
+  "totalEvents": 15871,
   "genesis": {
     "file": "genesis-state.json",
     "bytes": 9275126,
@@ -146,17 +146,17 @@
   "tail": {
     "file": "tail.jsonl",
     "fromSeq": 15000,
-    "toSeq": 15856,
-    "events": 857,
-    "bytes": 2201573,
-    "sha256": "f08fa8fab694252618a4c7d50986949d858cacff3b0c3f01a1a99bcd8bc9e84e"
+    "toSeq": 15870,
+    "events": 871,
+    "bytes": 2231110,
+    "sha256": "3d1fe56fef57e59ceaad79695cd73e28d9145a3afb0c1eba3b77226e0bda6be0"
   },
   "pin": {
-    "height": 1015401,
-    "seq": 15401,
-    "digest": "5d4b8997b3a5d81d8ad8f0c369cbe118cb79898f217ecdc47744df973b08f0c5",
-    "stateHash": "4ea502b835cf2426b6eb5523a19f2b3e4f300e7a3361e5d4b2ceb2ca93ffc027",
-    "logHash": "f29c0d9a80cc1183ce3b51e857860f289769dee42d31826ebf6e8451ac48c35e",
+    "height": 1015857,
+    "seq": 15857,
+    "digest": "1e8004cabca5d3815f963d2e6c0e903116a3b52cc671e13f7523139c209a9fef",
+    "stateHash": "ecdc19a72bc6836301dc96a2a0592231633c85089f86f4a8e02a234f8b4ce3ef",
+    "logHash": "180c9c3429519bf12545f7555c47aa5b6e84920563658053b87fd4b30131672c",
     "v": 2,
     "recipe": "sha256(stateHash|logHash|seq)",
     "codeHash": "77b338bd5cd602ac729d041860991122d5b38855c2e8ecdf4dfa76da25f921fe",
@@ -166,7 +166,7 @@
       "contract": "0x0EFa83693F6c64683B6E4a601BfB6dcfb6BCc720",
       "method": "headAt(uint256)"
     },
-    "txHash": "0xd8a812c7c8310590e3f87cacee886abf55289679d2f77a174f8085d6b3c6eaff"
+    "txHash": "0x8ffcb12e8acf8c322f41a61478b392d7c72ea3e02994f5386587a4c189d08cdd"
   },
   "note": "Segments are COMPLETE and IMMUTABLE — cache them forever. tail.jsonl is the live end of the record and changes constantly; never cache it. Concatenate genesis-state.json + every segment in order + tail.jsonl to hold exactly what the sequencer wrote — then do not take our word for any of it: git clone https://github.com/saidthefox/systema-verify && cd systema-verify && npm ci && ./bin/systema-verify <this url>. It folds the record with the published law and reads the anchor back off World Chain, which is the only claim here that does not depend on trusting this server."
 }
