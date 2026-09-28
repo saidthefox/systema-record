@@ -1,14 +1,14 @@
 {
   "v": 2,
   "stateHashV": 2,
-  "seq": 16800,
-  "height": 1016800,
-  "stateHash": "201b36e643268278186af483f30ee8497656f94fc89fefccf22f4deb0bf9d43c",
-  "logHash": "fc123e1451e6d20eb44292b65046fd9026ddd2817f60827924975bfd1b05bff4",
+  "seq": 16855,
+  "height": 1016855,
+  "stateHash": "3533b3a71f572765a8cfc697cbd96c02dd94051f5d356fa1921b04bcc28e55b4",
+  "logHash": "6926a9140e26944c33d278baa0edbf7d11ddfb61cf9a2854852e5aeb14840cb8",
   "codeHash": "5c529ff6cdc2cfd656fc3b9d70939f975146a5d248e06fa11285ba25797e10b6",
-  "digest": "b230ee83b2a8e0e6482239d5789f247c3654979e34d92e36ae5080e2874750d0",
-  "events": 16801,
-  "ts": "2026-09-27T22:55:37.198Z",
+  "digest": "cd14a074fe2318bb413722f8cdcf3a016476f16e9e8d9059963530d1b27c32d5",
+  "events": 16856,
+  "ts": "2026-09-28T05:39:07.821Z",
   "commandAuthProfile": "systema.command-auth.ed25519-spki-sha256.v2",
   "retainedRulesets": [
     "4504cc55b354ec2d6f834f8e938aa0fe2faa5c01f200445b80e48d4005e49a55",
@@ -19,7 +19,8 @@
     "378acbbfde1cea6b86d79fc51252238f33b350cef2f2bd0361b0fe8e7643b767",
     "294fc9996caa6413b7b0ccbf851fb84203fa62958a143b8b0ca9b518aacad782",
     "63f749598c2b074b7987bf1e3a510ee8af1346b5e4f2bca6430f2213c6c01c26",
-    "77b338bd5cd602ac729d041860991122d5b38855c2e8ecdf4dfa76da25f921fe"
+    "77b338bd5cd602ac729d041860991122d5b38855c2e8ecdf4dfa76da25f921fe",
+    "5c529ff6cdc2cfd656fc3b9d70939f975146a5d248e06fa11285ba25797e10b6"
   ],
   "v1Execution": {
     "profile": "systema.protocol-v1.prod-retained-reproduction.v1",
@@ -39,7 +40,7 @@
     "legacyUnboundDecisions": 8518,
     "firstPolicySeq": 11804,
     "active": {
-      "rulesetHash": "77b338bd5cd602ac729d041860991122d5b38855c2e8ecdf4dfa76da25f921fe",
+      "rulesetHash": "5c529ff6cdc2cfd656fc3b9d70939f975146a5d248e06fa11285ba25797e10b6",
       "source": "recorded-dial"
     }
   },
@@ -52,6 +53,6 @@
     "method": "headAt(uint256)"
   },
   "status": "confirmed",
-  "confirmedAt": "2026-09-27T23:06:06Z",
-  "txHash": "0x572482a305f9ced914e2d3ea6eadc0dff401db8b82b4acbce34bb42a51262493"
+  "confirmedAt": "2026-09-28T05:42:54Z",
+  "txHash": "0x0456ecd6ecf480c8d17a1b08f6db78ad90667c5586b3204f226c2c026bedb138"
 }
