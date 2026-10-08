@@ -1,14 +1,14 @@
 {
   "v": 2,
   "stateHashV": 2,
-  "seq": 20337,
-  "height": 1020337,
-  "stateHash": "14e02d4c737cc5b9abdcd232b12c2bd2cd9187e5005f3c7d7ea7df3771fa0c84",
-  "logHash": "7d63d3c2f9e168e6aef4e9d5195ea5918866816a1d0aacd2e3ad9e7c127f1f62",
+  "seq": 20736,
+  "height": 1020736,
+  "stateHash": "782cfa42b15bb4ddee567c1d3fc867de65e72d918fd4ee920892d0c1e0a39d1b",
+  "logHash": "eedafcb4aa946ad54b64a17f4f2069bcf2b21b2f13ece32b5b7288754e50c6be",
   "codeHash": "5b95185d8c484b8d07e65c7376a9db757e6fa67867e3e433aef12758f40e7ff9",
-  "digest": "39a629142fa180e29da5219453879d1b46c55318c53407f31de9a44c54c80b63",
-  "events": 20338,
-  "ts": "2026-10-07T18:54:05.252Z",
+  "digest": "0cf7020062e89ea2a3d10006193747b050d5f7cf71395e741c662675d50a206e",
+  "events": 20737,
+  "ts": "2026-10-08T04:47:42.877Z",
   "commandAuthProfile": "systema.command-auth.ed25519-spki-sha256.v2",
   "retainedRulesets": [
     "4504cc55b354ec2d6f834f8e938aa0fe2faa5c01f200445b80e48d4005e49a55",
@@ -54,6 +54,6 @@
     "method": "headAt(uint256)"
   },
   "status": "confirmed",
-  "confirmedAt": "2026-10-07T18:57:26Z",
-  "txHash": "0x2d376dff79c49b423f2bc3f88206152d23686d1b5919008cf7ed6a3b459b9bea"
+  "confirmedAt": "2026-10-08T05:41:58Z",
+  "txHash": "0xc25af90efcb2879edc912db22dcc7bb8aaf8fdae0b1124d9b5a105b50b4eed44"
 }
